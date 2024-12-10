@@ -1,0 +1,22 @@
+{
+  "name": "SFBaseUI",
+  "version": "0.1.0",
+  "summary": "A short description of SFBaseUI.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/gaozijian55555/SFBaseUI",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gaozijian55555": "448916193@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/gaozijian55555/SFBaseUI.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "SFBaseUI/Classes/**/*"
+}
