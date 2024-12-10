@@ -24,13 +24,13 @@ public class SFNavigationBar: UIView {
         }
     }
     
-    public override init(frame: CGRect) {
+    open override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
         self.layoutUI()
     }
     
-    public required init?(coder: NSCoder) {
+    open required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -47,7 +47,7 @@ public class SFNavigationBar: UIView {
         }
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         let statusBarFrame: CGRect! = UIApplication.shared.statusFrame()
         self.frame = CGRectMake(0, 0, statusBarFrame.width, statusBarFrame.height + 44)

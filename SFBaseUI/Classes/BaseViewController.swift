@@ -9,23 +9,23 @@ import UIKit
 
 open class BaseViewController : UIViewController {
     
-    public lazy var navigationBar: SFNavigationBar = {
+    open lazy var navigationBar: SFNavigationBar = {
         let navBar = SFNavigationBar(frame: CGRectZero)
         self.view.addSubview(navBar)
         return navBar
     }()
     
-    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    open override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.modalPresentationStyle = .fullScreen
         self.title = NSStringFromClass(Self.self).components(separatedBy: ".").last
     }
     
-    public required init?(coder: NSCoder) {
+    open required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
 
@@ -42,7 +42,7 @@ open class BaseViewController : UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    public override func viewDidLayoutSubviews() {
+    open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
     }

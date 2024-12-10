@@ -20,7 +20,7 @@ open class BaseTableViewCell : UITableViewCell {
         }
     }
     
-    public static func dequeueOrCreate(tableView: UITableView) -> BaseTableViewCell {
+    open static func dequeueOrCreate(tableView: UITableView) -> BaseTableViewCell {
         let identifier = NSStringFromClass(Self.self);
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? BaseTableViewCell {
@@ -30,32 +30,32 @@ open class BaseTableViewCell : UITableViewCell {
         }
     }
     
-    public required init?(coder: NSCoder) {
+    open required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    open override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.setUp()
         self.setUpLayout()
     }
     
-    private func setUp() {
+    open func setUp() {
         self.contentView.addSubview(self.titleLabel)
         
         self.contentView.backgroundColor = UIColor.white
     }
     
-    private func setUpLayout() {
+    open func setUpLayout() {
         self.titleLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
             make.top.equalToSuperview().offset(10)
         }
     }
     
-    public class func cellHeight(tableView: UITableView) -> CGFloat {
+    open class func cellHeight(tableView: UITableView) -> CGFloat {
         return 50
     }
     
