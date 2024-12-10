@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SFBaseUI'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SFBaseUI.'
+  s.summary          = 'SwiftStoryboard for shanghai jianlian BaseUIKit'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+SFBaseUI 是一个基础 UI 组件库，提供了许多常用的 UI 组件和工具函数，帮助快速构建 iOS 应用。
                        DESC
 
   s.homepage         = 'https://github.com/gaozijian55555/SFBaseUI'
@@ -28,14 +28,16 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/gaozijian55555/SFBaseUI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
-
+  s.ios.deployment_target = '11.0'
+  
+  s.swift_versions = ['5.0'] # 指定 Swift 版本
+  
   s.source_files = 'SFBaseUI/Classes/**/*'
   
   # s.resource_bundles = {
   #   'SFBaseUI' => ['SFBaseUI/Assets/*.png']
   # }
-
+  
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
