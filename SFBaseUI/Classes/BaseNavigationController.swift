@@ -9,12 +9,12 @@ import UIKit
 
 open class BaseNavigationController : UINavigationController {
     
-    override init(rootViewController: UIViewController) {
+    public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         self.modalPresentationStyle = .fullScreen
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

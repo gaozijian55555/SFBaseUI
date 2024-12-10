@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class SFNavigationBar: UIView {
+open class SFNavigationBar: UIView {
     
     private var isHiddenBackBtn: Bool = false
     
