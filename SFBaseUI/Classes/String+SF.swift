@@ -7,8 +7,8 @@
 
 import UIKit
 
-extension String {
-    func asImage() -> UIImage? {
+public extension String {
+    public func asImage() -> UIImage? {
         return UIImage(named: self)?.withRenderingMode(.alwaysOriginal)
     }
 }

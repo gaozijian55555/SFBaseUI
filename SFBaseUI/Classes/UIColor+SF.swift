@@ -7,8 +7,8 @@
 
 import UIKit
 
-extension UIColor {
-    @objc convenience init(hex: String, alpha: CGFloat = 1.0) {
+public extension UIColor {
+    public @objc convenience init(hex: String, alpha: CGFloat = 1.0) {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
@@ -37,17 +37,17 @@ extension UIColor {
         )
     }
 
-    convenience init(rgb: Int) {
+    public convenience init(rgb: Int) {
         self.init(rgb: rgb, alpha: 1.0)
     }
-    convenience init(rgb: Int, alpha: CGFloat) {
+    public convenience init(rgb: Int, alpha: CGFloat) {
         let r = CGFloat((rgb & 0xFF0000) >> 16)
         let g = CGFloat((rgb & 0x00FF00) >> 8)
         let b = CGFloat(rgb & 0x0000FF)
         self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: alpha)
     }
     
-    func alpha(_ value: CGFloat) -> UIColor {
+    public func alpha(_ value: CGFloat) -> UIColor {
         return withAlphaComponent(value)
     }
 }

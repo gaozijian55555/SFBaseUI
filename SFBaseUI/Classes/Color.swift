@@ -7,11 +7,11 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
-    static let Theme = UIColor.init(hex: "#333333")
+    public static let Theme = UIColor.init(hex: "#333333")
     
-    static let White = UIColor.init(hex: "#FFFFFF")
+    public static let White = UIColor.init(hex: "#FFFFFF")
     
-    static let Colorful = UIColor.init(hex: "#FA8715")
+    public static let Colorful = UIColor.init(hex: "#FA8715")
 }

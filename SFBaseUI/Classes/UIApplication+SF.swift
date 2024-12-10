@@ -7,8 +7,8 @@
 
 import UIKit
 
-extension UIApplication {
-    func windowOnVersion () -> UIWindow? {
+public extension UIApplication {
+    public func windowOnVersion () -> UIWindow? {
         if #available(iOS 15.0, *) {
             return UIApplication.shared.connectedScenes
                 .filter{$0.activationState == .foregroundActive}
@@ -20,7 +20,7 @@ extension UIApplication {
         }
     }
     
-    func statusFrame() -> CGRect? {
+    public func statusFrame() -> CGRect? {
         if #available(iOS 13.0, *) {
             return self.windowOnVersion()?.windowScene?.statusBarManager?.statusBarFrame
         } else {
@@ -28,7 +28,7 @@ extension UIApplication {
         }
     }
     
-    func RootNavigation() -> UINavigationController? {
+    public func RootNavigation() -> UINavigationController? {
         if let keyWindow = self.windowOnVersion() {
             return keyWindow.rootViewController?.presentedViewController as? UINavigationController
         }

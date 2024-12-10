@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-public class BaseTableViewCell : UITableViewCell {
+open class BaseTableViewCell : UITableViewCell {
     
     private lazy var titleLabel: UILabel = {
         return UILabel.fast(font: UIFont.Body, color: UIColor.Theme)
