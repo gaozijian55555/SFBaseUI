@@ -28,9 +28,9 @@ extension UIApplication {
         }
     }
     
-    func RootNavigation() -> SFRootNavigationController? {
+    func RootNavigation() -> UINavigationController? {
         if let keyWindow = self.windowOnVersion() {
-            return keyWindow.rootViewController?.presentedViewController as? SFRootNavigationController
+            return keyWindow.rootViewController?.presentedViewController as? UINavigationController
         }
         return nil
     }
