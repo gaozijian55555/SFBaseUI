@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SFNavigationBar: UIView {
+public class SFNavigationBar: UIView {
     
     private var isHiddenBackBtn: Bool = false
     
@@ -24,22 +24,22 @@ class SFNavigationBar: UIView {
         }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
         self.layoutUI()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
+    private func setup() {
         self.backgroundColor = UIColor(hex: "#FAFAFA")
         self.addSubview(self.titleView)
     }
     
-    func layoutUI() {
+    private func layoutUI() {
         self.titleView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.height.equalTo(30)
@@ -47,7 +47,7 @@ class SFNavigationBar: UIView {
         }
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         let statusBarFrame: CGRect! = UIApplication.shared.statusFrame()
         self.frame = CGRectMake(0, 0, statusBarFrame.width, statusBarFrame.height + 44)
