@@ -9,7 +9,7 @@ import UIKit
 
 public extension UILabel {
     
-    public class func fast(font: UIFont, color: UIColor) -> UILabel {
+    class func fast(font: UIFont, color: UIColor) -> UILabel {
         let label = UILabel()
         label.font = font
         label.textColor = color
