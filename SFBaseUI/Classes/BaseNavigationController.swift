@@ -34,7 +34,7 @@ public class BaseNavigationController : UINavigationController {
 }
 
 extension BaseNavigationController :UIGestureRecognizerDelegate {
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return self.viewControllers.count > 1
     }
 }

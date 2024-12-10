@@ -8,19 +8,19 @@
 import UIKit
 import SnapKit
 
-open class BaseTableViewCell : UITableViewCell {
+public class BaseTableViewCell : UITableViewCell {
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         return UILabel.fast(font: UIFont.Body, color: UIColor.Theme)
     }()
     
-    var title: String? {
+    public var title: String? {
         didSet {
             titleLabel.text = title
         }
     }
     
-    static func dequeueOrCreate(tableView: UITableView) -> BaseTableViewCell {
+    public static func dequeueOrCreate(tableView: UITableView) -> BaseTableViewCell {
         let identifier = NSStringFromClass(Self.self);
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? BaseTableViewCell {
@@ -30,12 +30,12 @@ open class BaseTableViewCell : UITableViewCell {
         }
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.setUp()
@@ -55,7 +55,7 @@ open class BaseTableViewCell : UITableViewCell {
         }
     }
     
-    class func cellHeight(tableView: UITableView) -> CGFloat {
+    public class func cellHeight(tableView: UITableView) -> CGFloat {
         return 50
     }
     
