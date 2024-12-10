@@ -15,13 +15,13 @@ open class BaseViewController : UIViewController {
         return navBar
     }()
     
-    open override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.modalPresentationStyle = .fullScreen
         self.title = NSStringFromClass(Self.self).components(separatedBy: ".").last
     }
     
-    open required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
@@ -32,6 +32,11 @@ open class BaseViewController : UIViewController {
         self.setupNavigationBar()
     }
     
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
+    
     public override var title: String? {
         didSet {
             self.navigationBar.title = title
@@ -40,11 +45,6 @@ open class BaseViewController : UIViewController {
     
     private func setupNavigationBar() {
         self.navigationController?.isNavigationBarHidden = true
-    }
-    
-    open override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
     }
     
 }

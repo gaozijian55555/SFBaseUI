@@ -9,12 +9,12 @@ import UIKit
 
 open class BaseNavigationController : UINavigationController {
     
-    open override init(rootViewController: UIViewController) {
+    override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         self.modalPresentationStyle = .fullScreen
     }
     
-    open required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -34,7 +34,7 @@ open class BaseNavigationController : UINavigationController {
 }
 
 extension BaseNavigationController :UIGestureRecognizerDelegate {
-    open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return self.viewControllers.count > 1
     }
 }
