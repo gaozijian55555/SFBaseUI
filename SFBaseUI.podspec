@@ -40,5 +40,6 @@ SFBaseUI 是一个基础 UI 组件库，提供了许多常用的 UI 组件和工
   
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'SnapKit', '5.6.0'
+   
 end

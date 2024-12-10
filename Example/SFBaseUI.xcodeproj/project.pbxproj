@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D22477D13A5474BCB11793F /* Pods_SFBaseUI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F90250441A14C0DF8E1A65 /* Pods_SFBaseUI_Example.framework */; };
+		2FDA3F562D082B85008749C4 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 2FDA3F552D082B85008749C4 /* Classes */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		1D35A8F3590367E647737453 /* Pods-SFBaseUI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFBaseUI_Tests.release.xcconfig"; path = "Target Support Files/Pods-SFBaseUI_Tests/Pods-SFBaseUI_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2FDA3F552D082B85008749C4 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Classes; path = ../SFBaseUI/Classes; sourceTree = "<group>"; };
 		3FE8958E2F8E58BB24024C34 /* Pods-SFBaseUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFBaseUI_Example.release.xcconfig"; path = "Target Support Files/Pods-SFBaseUI_Example/Pods-SFBaseUI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		47F90250441A14C0DF8E1A65 /* Pods_SFBaseUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFBaseUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* SFBaseUI_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFBaseUI_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				2FDA3F552D082B85008749C4 /* Classes */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for SFBaseUI */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				2FDA3F562D082B85008749C4 /* Classes in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
