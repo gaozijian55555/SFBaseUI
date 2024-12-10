@@ -9,9 +9,9 @@ import UIKit
 
 public extension UIColor {
     
-    public static let Theme = UIColor.init(hex: "#333333")
+    static let Theme = UIColor.init(hex: "#333333")
     
-    public static let White = UIColor.init(hex: "#FFFFFF")
+    static let White = UIColor.init(hex: "#FFFFFF")
     
-    public static let Colorful = UIColor.init(hex: "#FA8715")
+    static let Colorful = UIColor.init(hex: "#FA8715")
 }
